@@ -1,7 +1,7 @@
-import numpy as np
 
-n = input("Enter no of integers: ")
-nos = np.array(list(map(int, input("Enter numbers: ").split())))
-out = np.matmul(nos.reshape(-1, 1), nos.reshape(1, -1))
-np.fill_diagonal(out, 0)
-print(int(np.max(out)))
+def max_pairwise():
+    n = input()
+    nos = list(map(int, input().split()))
+    nos = sorted(nos)
+    print(nos[-2] * nos[-1])
+max_pairwise()
